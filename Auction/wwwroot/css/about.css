@@ -1,0 +1,240 @@
+﻿
+
+
+body{
+
+    font-family:"Montserrat",sans-serif;
+    background-color:lightgray;
+
+    
+}
+
+
+.abo  {
+    font-size: 200px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 20px;
+    position: absolute;
+ top:15%;
+ left:50%;
+    transform: translate(-50%,-50%);
+margin:0;
+
+    background: url(../Images/auc1.jpg) 50% 50%;
+    background-size:cover;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+
+
+    
+}
+    .abo h1 {
+        font-size: 100px;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 10px;
+        padding-top:80px;
+    }
+.paragraph {
+    padding-left: 30%;
+    padding-top:200px;
+ 
+    padding-bottom:400px;
+    
+   
+}
+    .paragraph p{
+        font-weight:bold;
+        font-size:20px;
+    }
+    /*   padding-left:30%;
+    padding-top:150px;
+*/
+    footer {
+        height: 400px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #053742;
+        color: white;
+        margin-top:auto;
+    
+    }
+
+.containerr {
+    display: flex;
+    padding: 3rem;
+}
+
+    .containerr .section {
+        flex-basis: 50%;
+        padding: 0px 10%;
+    }
+
+.section h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section .contentt {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+    .section .contentt::before {
+        position: absolute;
+        content: '';
+        top: -10px;
+        height: 2px;
+        width: 100%;
+    }
+
+    .section .contentt::after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 15%;
+        background-color: #dd5f24;
+        top: -10px;
+    }
+
+
+.containerr .left {
+    left: 0;
+    padding-left: 0px;
+}
+
+.left .contentt .social {
+    margin: 20px 0 0 0;
+}
+
+    .left .contentt .social a {
+        padding: 0 2px;
+    }
+
+        .left .contentt .social a span {
+            height: 40px;
+            width: 40px;
+            background: transparent;
+            line-height: 40px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 50px;
+            transition: 0.4s;
+            border: 1px solid #656565;
+        }
+
+
+            .left .contentt .social a span:hover {
+                background: #dd5f24;
+            }
+
+.center .contentt .fas {
+    font-size: 1.1rem;
+    background: transparent;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #656565;
+}
+
+    .center .contentt .fas:hover {
+        background: #dd5f24;
+        border: 1px solid #dd5f24;
+    }
+
+.center .contentt .text {
+    font-size: 1.0.6rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .contentt .phone {
+    margin: 15px 0;
+}
+/*
+
+.right form .text {
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #656565;
+}
+
+.right form input {
+    width: 100%;
+    font-size: 1.0625rem;
+    background: transparent;
+    border: 1px solid #656565;
+}
+
+.right form input {
+    height: 35px;
+}
+
+.right form .btn {
+    margin-top: 10px;
+}
+
+    .right form .btn button {
+        height: 40px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: #6b6dcd;
+        font-size: 1.0625rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+
+        .right form .btn button:hover {
+            background: #000;
+        }
+    */
+.footer-bottom center {
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #fff;
+}
+
+    .footer-bottom center span {
+        color: #656565;
+    }
+
+    .footer-bottom center a {
+        text-decoration: none;
+    }
+
+        .footer-bottom center a:hover {
+            text-decoration: underline;
+        }
+
+@media screen and (max-width:700px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+
+    .left .content {
+        padding-right: 0px;
+        padding-bottom: 30px;
+    }
+
+    .containerr {
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+        .containerr .section {
+            margin: 5px 0;
+        }
+}
+    

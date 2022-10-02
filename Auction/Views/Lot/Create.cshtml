@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/common.css" asp-append-version="true" />
+</head>
+<body>
+
+
+    @model Auction.Models.Lot
+    @{
+        ViewData["Title"] = "Create";
+    }
+    <h2>Create Lot</h2>
+    <form asp-action="create" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Name"></label>
+                <input class="form-control" asp-for="Name">
+                <span asp-validation-for="Name" class=" text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Price"></label>
+                <input class="form-control" asp-for="Price">
+                <span asp-validation-for="Price" class=" text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="AvailabilityStatus"></label>
+                <select class="form-control" asp-for="AvailabilityStatus">
+                    <option value="Open">Open</option>
+                    <option value="Closed">Closed</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="CategoryId"></label>
+                <select class="form-control" asp-for="CategoryId">
+                    @foreach (var category in ViewBag.categories)
+                    {
+                        <option value="@category.Id">@category.CategoryName</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Picture"></label>
+                <input class="form-control" asp-for="Picture">
+                <span asp-validation-for="Picture" class=" text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="Description"></label>
+                <textarea class="form-control" asp-for="Description"><</textarea>
+                <span asp-validation-for="Description" class=" text-danger"></span>
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-success" id="submit">Create</button>
+        <a class="btn btn-danger" href="/Lot/index">Cancel</a>
+    </form>
+    <div class="lastt"></div>
+    @section Scripts{
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+        <script src="~/lib/aspnet/signalr/dist/browser/signalr.js"></script>
+        <script src="~/js/bid.js"></script>
+    }
+    </body>
+</html>

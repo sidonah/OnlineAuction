@@ -1,0 +1,17 @@
+﻿<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/common.css" asp-append-version="true" />
+</head>
+<body>
+
+    @model Auction.Models.Lot
+    <section class="d-flex flex-row bd-highlight" style="justify-content: space-evenly">
+        <div>
+            <image src="/@Model.PictureUrl" class="img-thumbnail " style="width: 400px; height: 400px" />
+            <p>Name : @Model.Name</p>
+            <p>Price : @Model.Price</p>
+        </div>
+    </section>
+    </body>
+</html>

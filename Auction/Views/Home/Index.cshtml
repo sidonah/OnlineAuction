@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+</head>
+<body>
+    @model List<Auction.Models.Lot>
+    @{ ViewData["Title"] = "Home Page"; }
+    <div class="wrapper">
+        <div class="notanimation">Welcome </div>
+        <ul class="animationn">
+            <li><span>To Bidders Baazar Online Auction </span></li>
+        </ul>
+    </div>
+
+
+    <div class="banner">
+        <div class="content">
+            <h1>Bidders Baazar</h1>
+            <p>online auction were u can </p>
+
+        </div>
+    </div>
+
+
+    <form class="d-flex">
+        <input class="form-control" type="text" placeholder="Search" name="search" value="@ViewBag.search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <br />
+    <br />
+
+
+
+
+    <div class="d-flex flex-row bd-highlight flex-wrap" style="gap: 50px; background-color: lightgray; padding-bottom: 400px;">
+
+        @foreach (var lot in Model)
+        {
+<div class="lottt" style="border: solid 2px; color: black; background-color: darkgrey;">
+    <a href="Lot/Detail/@lot.Id" class="text-center nav-link ">
+
+        <image src="@lot.PictureUrl" class="img-thumbnail " style="width: 300px; height: 300px;" />
+
+        <p class="para" style=" font-size:1rem;color:white;font-weight:bold">Name : @lot.Name</p>
+        <p class="desc" style=" font-size: 1rem; color: white; font-weight: bold">Description: @lot.Description</p>
+        <p class="para" style=" font-size: 1rem; color: white; font-weight: bold">Price : @lot.Price</p>
+
+
+    </a>
+</div>}
+
+    </div>
+ 
+
+
+
+</body>
+</html>

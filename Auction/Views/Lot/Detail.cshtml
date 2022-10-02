@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/common.css" asp-append-version="true" />
+
+</head>
+<body>
+
+
+
+    @model Auction.Models.Lot
+    <section class="d-flex flex-row bd-highlight" style="justify-content: space-evenly">
+        @if (Model != null)
+        {
+    <div>
+
+        <image src="/@Model.PictureUrl" alt="lotpicture" class="img-thumbnail " style="width: 400px; height: 400px" />
+
+    </div>
+                    <div style="align-self: center;">
+                        <p>Lot Name : @Model.Name</p>
+                        <p>Initial Price : @Model.Price birr</p>
+                        @if (@ViewBag.show == 1)
+                        {
+        <div>
+            <label for="bid">Enter your bid : </label>
+            <input id="bid" name="bid" type="text" />
+            <input type="button" value="Submit" id="send" />
+        </div>}
+                        Best price : <span id="showBestPrice">@Model.Price birr</span>
+                        <div id="DisplayError" style="color : red"></div>
+                    </div>
+                                    <span id="lotId" style="display: none">@Model.Id</span>            }
+    </section>
+
+    <script src="~/lib/aspnet/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/bid.js"></script>
+    </body>
+</html>
+
+
+
